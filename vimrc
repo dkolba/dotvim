@@ -27,10 +27,18 @@ let NERDTreeShowHidden=1
 " Supertab
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "
-let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+let g:SuperTabDefaultCompletionType = '<C-X><C-O>'
 "let g:SuperTabMappingTabLiteral = '<a-tab>'
 
-	
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Pydiction
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Remember to use Ctrl+n instead of Tab for code completion!
+"
+" Path to the python dictionary used for completion
+let g:pydiction_location = "~/.vim/bundle/pydiction/complete-dict"
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Misc
@@ -44,6 +52,9 @@ filetype plugin indent on
 "Map code completion to , + tab
 imap ,<tab> <C-x><C-o>
 
-if version >= 700
-    autocmd FileType python set omnifunc=pythoncomplete#Complete
+if has("autocmd")	
+    if version >= 700
+        autocmd FileType python set omnifunc=pythoncomplete#Complete
+        autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+    endif
 endif
