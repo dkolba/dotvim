@@ -13,9 +13,6 @@
 [submodule "bundle/surround"]
 	path = bundle/surround
 	url = https://github.com/tpope/vim-surround.git
-[submodule "bundle/supertab"]
-	path = bundle/supertab
-	url = https://github.com/ervandew/supertab.git
 [submodule "bundle/pydiction"]
 	path = bundle/pydiction
 	url = https://github.com/milmazz/Pydiction.git

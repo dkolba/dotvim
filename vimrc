@@ -11,7 +11,13 @@ call pathogen#helptags()
 let g:sparkup = 'sparkup'
 let g:sparkupArgs = '--no-last-newline'
 let g:sparkupExecuteMapping = '<c-e>'
-let g:sparkupNextMapping = '<c-x>'
+"let g:sparkupNextMapping = '<c-x>'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" snipMate
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"TAB expands snipMate snippets
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NERDTree
@@ -21,14 +27,6 @@ nmap ,nt :NERDTreeToggle
 
 "Show hidden files in NerdTree
 let NERDTreeShowHidden=1
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Supertab
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"
-let g:SuperTabDefaultCompletionType = '<C-X><C-O>'
-"let g:SuperTabMappingTabLiteral = '<a-tab>'
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
