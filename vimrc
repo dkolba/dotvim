@@ -11,7 +11,7 @@ call pathogen#helptags()
 let g:sparkup = 'sparkup'
 let g:sparkupArgs = '--no-last-newline'
 let g:sparkupExecuteMapping = '<c-e>'
-let g:sparkupNextMapping = '<c-x>'
+let g:sparkupNextMapping = '<c-n>'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NERDTree
