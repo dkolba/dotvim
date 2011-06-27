@@ -41,6 +41,14 @@ let g:pydiction_location = "~/.vim/bundle/pydiction/complete-dict"
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" EasyMotion
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Activate EasyMotion with '\w'
+"
+" Shading text when EasyMotion is activated
+let g:EasyMotion_do_shade = 1
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " TEXT EDITING
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Use the same symbols as TextMate for tabstops and EOLs
