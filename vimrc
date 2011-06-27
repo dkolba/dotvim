@@ -48,6 +48,14 @@ let g:pydiction_location = "~/.vim/bundle/pydiction/complete-dict"
 " Shading text when EasyMotion is activated
 let g:EasyMotion_do_shade = 1
 
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Gundo
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Remap F4 as Gundo toggle key
+nnoremap <F4> :GundoToggle<CR>
+
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " TEXT EDITING
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
