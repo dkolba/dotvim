@@ -5,6 +5,7 @@ filetype off
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Sparkup
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -12,6 +13,7 @@ let g:sparkup = 'sparkup'
 let g:sparkupArgs = '--no-last-newline'
 let g:sparkupExecuteMapping = '<c-e>'
 let g:sparkupNextMapping = '<c-n>'
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NERDTree
@@ -21,14 +23,6 @@ nmap ,nt :NERDTreeToggle
 
 "Show hidden files in NerdTree
 let NERDTreeShowHidden=1
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Supertab
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"
-let g:SuperTabDefaultCompletionType = '<C-X><C-O>'
-"let g:SuperTabMappingTabLiteral = '<a-tab>'
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -106,10 +100,32 @@ let g:yankring_clipboard_monitor = 1
 " yankring's history
 let g:yankring_paste_check_default_buffer = 1
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" DISPLAY
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set ruler
+set number
+set showcmd
+set laststatus=2
+set winminheight=0
+set winminwidth=0
+set winheight=10
+set display+=lastline
+set textwidth=0
+set columns=90
+set wrapmargin=10
+set numberwidth=5
+
+"Opens a vertical split and switches over (\v)
+nnoremap <leader>v <C-w>v<C-w>l
+
+"Split windows below the current window.
+set splitbelow
+
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " TEXT EDITING
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Use the same symbols as TextMate for tabstops and EOLs
 set wildmenu
 set wildmode=list:longest,full
 set wildignore+=*.o,*~,.lo,*.pyc,*.bak,*.jpg,*.png,*.gif
@@ -134,6 +150,9 @@ set encoding=utf-8 fileencodings=.
 set showfulltag
 set completeopt=longest,menuone,preview
 
+"Hard-wrap paragraphs of text
+nnoremap <leader>q gqip
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " KEY MAPPINGS
@@ -141,18 +160,91 @@ set completeopt=longest,menuone,preview
 " In addition to <esc>, jj will exit to normal mode.
 inoremap jj <ESC>
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Misc
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-colorscheme wombat256
-set number
-syntax on
-command! Status echo "All systems are go!"
-filetype plugin indent on
-"filetype indent on
+"Faster shortcut for commenting. Requires T-Comment plugin
+map ,c <c-_><c-_>
+
+"Saves time; maps the spacebar to colon
+nmap <space> :
 
 "Map code completion to , + tab
 imap ,<tab> <C-x><C-o>
+
+"Bubble single lines (kicks butt)
+"http://vimcasts.org/episodes/bubbling-text/
+nmap <C-Up> ddkP
+nmap <C-Down> ddp
+
+"Bubble multiple lines
+vmap <C-Up> xkP`[V`]
+vmap <C-Down> xp`[V`]
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Colors
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+colorscheme wombat256
+syntax on
+set background=dark
+set colorcolumn=80
+
+" Use the below highlight group when displaying bad whitespace is desired.
+highlight ExtraWhitespace ctermbg=red guibg=red
+
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+
+" full Python syntax highlighting
+let python_highlight_all=1
+"let g:pyflakes_use_quickfix=0
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" SEARCH
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set incsearch   " do incremental searching
+set ignorecase
+set infercase
+set smartcase
+set hlsearch
+set showmatch
+set diffopt=filler,iwhite
+nnoremap / /\v
+vnoremap / /\v
+set gdefault
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ABBREVIATIONS
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+iab lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" SPELLING 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+iab teh the
+iab Teh The
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Misc
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"Forget compatibility with Vi. Who cares.
+set nocompatible
+
+"Write the old file out when switching between files.
+set autowrite
+
+"Switch between buffers without saving
+set hidden
+
+command! Status echo "All systems are go!"
+filetype plugin indent on
+"filetype indent on
 
 if has("autocmd")
     if version >= 700
