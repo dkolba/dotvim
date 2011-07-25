@@ -5,7 +5,13 @@ filetype off
 call pathogen#runtime_append_all_bundles()
 call pathogen#helptags()
 
-
+let leader = ','
+let mapleader = ','
+let g:mapleader = ','
+let localleader = '\'
+let g:localleader = '\'
+let leader = ','
+let g:leader = ','
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Sparkup
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -99,10 +105,14 @@ let g:yankring_clipboard_monitor = 1
 " yankring, use the default register value rather than the top item in
 " yankring's history
 let g:yankring_paste_check_default_buffer = 1
-
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" MINIBUFEXPL 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <Leader>bb :TMiniBufExplorer<cr>
+let g:miniBufExplSplitBelow = 0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " DISPLAY
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set ruler
 set number
 set showcmd
@@ -181,6 +191,11 @@ vmap <C-Down> xp`[V`]
 " Press ESC and matches will no longer be highlighted
 nmap CTRL-v Shift-ESC :nohls CTRL-v ENTER
 
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colors
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -195,6 +210,8 @@ highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+b
+
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
