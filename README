@@ -13,3 +13,7 @@ Switch to ~/.vim directory and fetch submodules:
     cd ~/.vim
     git submodule init
     git submodule update
+
+From now on, this updates all submodules:
+
+git submodule foreach git pull origin master
