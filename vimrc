@@ -1,4 +1,34 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" SHORTCUTS
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" <c-e>    = Expand item(s) to HTML markup via Sparkup
+" <c-n>    = Next menu item
+" <c-p>    = Previous menu item
+" <c-n>    = Autocomplete python code (within *.py files)
+" ,v       = Open vertical split window
+" ,nt      = Toggle NERDTree on/off
+" ,mw      = Activate EasyMotion
+" ,bb      = Toggle MiniBufExpl on/off
+" yy       = Add current Line to YankRing
+" F3       = Toggle YankRing
+" F4       = Toggle Gundo
+" jj       = Exit normal mode
+" ,c       = Comment/uncomment line
+" ,v       = Vertical split window
+" <space>  = Map the spacebar to colon
+" ,<tab>   = Code completion
+" <C-Up>   = Bubble line up
+" <C-Down> = Bubble line down
+" <C-Up>   = Bubble line up
+" <C-Down> = Bubble line down
+" <ESC>    = Matches will no longer be highlighted
+" <C-h>    = Move to left window
+" <C-j>    = Move to lower window
+" <C-k>    = Move to upper window
+" <C-l>    = Move to right window
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PATHOGEN
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 filetype off
@@ -43,11 +73,11 @@ let g:pydiction_location = "~/.vim/bundle/pydiction/complete-dict"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " EasyMotion
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Activate EasyMotion with '\w'
+" Activate EasyMotion with '\mw'
 "
 " Shading text when EasyMotion is activated
 let g:EasyMotion_do_shade = 1
-
+let g:EasyMotion_leader_key = '<Leader>m'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Gundo
@@ -105,16 +135,12 @@ let g:yankring_clipboard_monitor = 1
 " yankring, use the default register value rather than the top item in
 " yankring's history
 let g:yankring_paste_check_default_buffer = 1
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" MINIBUFEXPL 
+" MINIBUFEXPL
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map <Leader>bb :TMiniBufExplorer<cr>
 let g:miniBufExplSplitBelow = 0
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" EASYMOTION
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:EasyMotion_leader_key = '<Leader>m'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " DISPLAY
@@ -127,9 +153,11 @@ set winminheight=0
 set winminwidth=0
 set winheight=10
 set display+=lastline
+" No automatic line breaks
 set textwidth=0
 set columns=90
-set wrapmargin=10
+" Automatic line breaks, ten characters from the right
+"set wrapmargin=10
 set numberwidth=5
 
 "Opens a vertical split and switches over (\v)
@@ -248,7 +276,7 @@ iab lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusm
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" SPELLING 
+" SPELLING
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 iab teh the
 iab Teh The
