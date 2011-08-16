@@ -1,6 +1,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " SHORTCUTS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" %        = (on parentheses) search for matching parenthesis
 " <c-e>    = Expand item(s) to HTML markup via Sparkup
 " <c-n>    = Next menu item
 " <c-p>    = Previous menu item
@@ -26,7 +27,7 @@
 " <C-j>    = Move to lower window
 " <C-k>    = Move to upper window
 " <C-l>    = Move to right window
-
+" cst<p>   = Change surrounding tag to <p>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PATHOGEN
