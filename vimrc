@@ -28,7 +28,9 @@
 " <C-k>    = Move to upper window
 " <C-l>    = Move to right window
 " cst<p>   = Change surrounding tag to <p>
-
+" %s/X/Y/g = Find X and replace it with Y (globally)
+" %s/\s*\(\w*@\w*.\w*\)/<a href=\"mailto:\1">\1<\/a>
+"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PATHOGEN
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
