@@ -17,3 +17,8 @@ Switch to ~/.vim directory and fetch submodules:
 From now on, this updates all submodules:
 
 git submodule foreach git pull origin master
+
+
+Install submodules like this:
+
+git submodule add http://github.com/tpope/vim-fugitive.git bundle/fugitive
