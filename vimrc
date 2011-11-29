@@ -30,7 +30,12 @@
 " cst<p>   = Change surrounding tag to <p>
 " %s/X/Y/g = Find X and replace it with Y (globally)
 " %s/\s*\(\w*@\w*.\w*\)/<a href=\"mailto:\1">\1<\/a>
-"
+" .        = repeat last change
+" va"      = select all text betweet (and including) quotes
+" vi"      = select all text betweet quotes
+" vat      = select all text betweet (and including) tags
+" vit      = select all text betwwet tags
+" *        = find all occurrences of the word under the curser
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PATHOGEN
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
