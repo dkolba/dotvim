@@ -40,3 +40,6 @@
 [submodule "bundle/prefixr"]
 	path = bundle/prefixr
 	url = https://github.com/mr-szymanski/prefixr.git
+[submodule "bundle/jade"]
+	path = bundle/jade
+	url = https://github.com/digitaltoad/vim-jade.git
