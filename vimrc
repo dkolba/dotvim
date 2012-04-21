@@ -36,6 +36,7 @@
 " vat      = select all text betweet (and including) tags
 " vit      = select all text betwwet tags
 " *        = find all occurrences of the word under the curser
+" <tab>    = Expand snipMate snippets
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PATHOGEN
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
