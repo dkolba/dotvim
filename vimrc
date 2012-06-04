@@ -242,7 +242,7 @@ nmap <C-l> <C-w>l
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colors
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-colorscheme wombat256
+colorscheme solarized
 syntax on
 set background=dark
 set colorcolumn=80
