@@ -189,9 +189,9 @@ set preserveindent
 set nosmartindent
 set smarttab
 set expandtab
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set wrap
 set formatoptions=lcroqwan2vb1
 set showmatch
