@@ -61,14 +61,19 @@ let g:sparkupNextMapping = '<c-n>'
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" NERDTree
+" netrw
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"Shortcut for NERDTreeToggle
-nmap ,nt :NERDTreeToggle
-
-"Show hidden files in NerdTree
-let NERDTreeShowHidden=1
-
+" Show files in netrw
+" :e. open file explorer at current working directory
+" :sp. open file explorer in split at current working directory
+" :vs. open file explorer in vertical split at current working directory
+" :E open file explorer at directory of current file
+" :Se open file explorer in split at directory of current file
+" :Ve open file explorer in vertical split at directory of current file
+" % create a new file (in netrw)
+" d create a new directory (in netrw)
+" R rename the file/directory under the cursor (in netrw)
+" D Delete the file/directory under the cursor (in netrw)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Pydiction
