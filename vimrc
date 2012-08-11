@@ -37,6 +37,12 @@
 " vit      = select all text betwwet tags
 " *        = find all occurrences of the word under the curser
 " <tab>    = Expand snipMate snippets
+" Ve       = open file explorer in current folder
+" df,      = (reverse dF,)   -- delete all characters till , on the current line.
+" I        = go to beginning of the line as insert mode.
+" $        = in command mode, go to end of the line.
+" gg       = go to beginning of the file
+" G        = go to end of the file
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " PATHOGEN
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
