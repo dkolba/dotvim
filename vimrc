@@ -173,12 +173,14 @@ set winminheight=0
 set winminwidth=0
 set winheight=10
 set display+=lastline
+
 " No automatic line breaks
-set textwidth=0
-set columns=90
+set textwidth=80
+"set columns=90
+
 " Automatic line breaks, ten characters from the right
 "set wrapmargin=10
-set numberwidth=5
+"set numberwidth=5
 
 "Opens a vertical split and switches over (\v)
 nnoremap <leader>v <C-w>v<C-w>l
@@ -252,8 +254,8 @@ nmap <C-l> <C-w>l
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Colors
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-colorscheme solarized
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"colorscheme solarized
 syntax on
 set background=dark
 set colorcolumn=80
@@ -301,6 +303,15 @@ iab lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusm
 iab teh the
 iab Teh The
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" DISTRACTION FREE MARKDOWN EDITING
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+  au BufNewFile,BufRead *.{md,mdown,mkd,mkdn,markdown,mdwn} call DistractionFreeWriting()
+    function! DistractionFreeWriting()
+        set laststatus=0                   " don't show status line
+        set noruler                        " don't show ruler
+        set linebreak                      " break the lines on words
+    endfunction
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Misc
