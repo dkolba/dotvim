@@ -239,6 +239,11 @@ imap ,<tab> <C-x><C-o>
 "http://vimcasts.org/episodes/bubbling-text/
 nmap <C-Up> ddkP
 nmap <C-Down> ddp
+"This makes bubbling work on Mac OSX (still have to edit terminal.app settings)
+nmap <Esc>[A ddkP
+nmap <Esc>[B ddp
+
+
 
 "Bubble multiple lines
 vmap <C-Up> xkP`[V`]
