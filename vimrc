@@ -20,8 +20,6 @@
 " ,<tab>   = Code completion
 " <C-Up>   = Bubble line up
 " <C-Down> = Bubble line down
-" <C-Up>   = Bubble line up
-" <C-Down> = Bubble line down
 " <ESC>    = Matches will no longer be highlighted
 " <C-h>    = Move to left window
 " <C-j>    = Move to lower window
@@ -358,6 +356,9 @@ au Syntax * RainbowParenthesesLoadBraces
 
 "Forget compatibility with Vi. Who cares.
 set nocompatible
+
+"Fix backspace and auto-indentation
+set backspace=indent,eol,start
 
 "Write the old file out when switching between files.
 set autowrite
