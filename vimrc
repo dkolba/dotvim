@@ -319,6 +319,13 @@ iab Teh The
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Fix css/js code completion in html files
+" (needs to be set before rainbow parens)
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set ft=html.css.javascript
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " RAINBOW PARENS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:rbpt_colorpairs = [
@@ -376,6 +383,7 @@ if has("autocmd")
         autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
     endif
 endif
+
 
 " Tell vim to remember certain things when we exit
 "  '10 : marks will be remembered for up to 10 previously edited files
