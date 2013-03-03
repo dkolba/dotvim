@@ -381,6 +381,7 @@ if has("autocmd")
     if version >= 700
         autocmd FileType python set omnifunc=pythoncomplete#Complete
         autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+        autocmd FileType js setomnifunc=javascriptcomplete#CompleteJS
     endif
 endif
 
