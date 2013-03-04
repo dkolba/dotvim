@@ -358,12 +358,26 @@ au Syntax * RainbowParenthesesLoadBraces
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" nodejs complete
+" NODEJS COMPLETE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:nodejs_complete_config = {
       \  'js_compl_fn': 'javascriptcomplete#CompleteJS',
       \  'max_node_compl_len': 15
       \}
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" SYNTASTIC
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_jump=1
+let g:syntastic_stl_format = '[%E{Err: %fe #%e}%B{, }%W{Warn: %fw #%w}]'
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Misc
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
