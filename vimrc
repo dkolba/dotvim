@@ -441,3 +441,5 @@ augroup JumpCursorOnEdit
  \ endif
 augroup END
 set nofoldenable
+// Treat underscores as word seperators
+set iskeyword-=_
